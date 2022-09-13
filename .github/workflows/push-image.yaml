@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          context: Contenful
+          context: Contentful
           tags: albal/contentful:latest
           
