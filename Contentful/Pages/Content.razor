@@ -1,0 +1,48 @@
+﻿@page "/content"
+
+<PageTitle>Content</PageTitle>
+@using Contentful.Data
+@inject ContentfulService CarService
+
+<h1>Content</h1>
+Here is a place holder for some sample content from Contentful.
+        
+@if (cars == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>KWh/mile</th>
+                <th>MPG</th>
+                <th>Release</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in cars)
+            {
+                <tr>
+                    <td>@car.make</td>
+                    <td>@car.model</td>
+                    <td>@car.kwhmile.ToString()</td>
+                    <td>@car.mpg.ToString()</td>
+                    <td>@car.release.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private CarData[]? cars;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cars = await CarService.GetCarDataAsync(DateTime.Now);
+    }
+}

@@ -1,0 +1,9 @@
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Contentful.exe
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\appsettings.Development.json
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\appsettings.json
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Contentful.dll
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Contentful.deps.json
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Contentful.runtimeconfig.json
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Contentful.pdb
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Contentful.Core.dll
+C:\Users\al\source\repos\Contentful\Contentful\obj\Docker\publish\Newtonsoft.Json.dll

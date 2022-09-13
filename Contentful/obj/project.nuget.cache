@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "BmAV7qDB0hNVI+1YkbfsHtzj7XSZ/TS8gF+FaYAFaLxUE56D9U7+8pWOV96hxsksPPfTASnUjh1lg26wp/VeSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\al\\source\\repos\\Contentful\\Contentful\\Contentful.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\al\\.nuget\\packages\\contentful.csharp\\7.2.0\\contentful.csharp.7.2.0.nupkg.sha512",
+    "C:\\Users\\al\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\al\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
+    "C:\\Users\\al\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
