@@ -24,6 +24,8 @@ jobs:
       ARM_CLIENT_SECRET: ${{secrets.TF_ARM_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: 2ca7f686-b554-401a-8630-3ebc46e42e64
       ARM_TENANT_ID: ba82b308-dd6b-4236-b218-6262064c27ee
+      TF_VAR_CONTENTFUL_APIKEY: ${{secrerts.TF_VAR_CONTENTFUL_APIKEY}}
+      TF_VAR_CONTENTFUL_SPACE: ${{secrets.TF_VAR_CONTENTFUL_SPACE}}
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
