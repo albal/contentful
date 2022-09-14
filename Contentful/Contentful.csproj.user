@@ -4,4 +4,7 @@
     <ActiveDebugProfile>Docker</ActiveDebugProfile>
     <NameOfLastUsedPublishProfile>C:\Users\al\source\repos\Contentful\Contentful\Properties\PublishProfiles\registry.hub.docker.com_albal.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>
