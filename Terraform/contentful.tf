@@ -32,7 +32,7 @@ resource "azurerm_container_group" "contentful-g" {
     memory = "1.5"
 
     environment_variables = ["TF_VAR_CONTENTFUL_APIKEY", "TF_VAR_CONTENTFUL_SPACE"]
-    
+
     ports {
       port     = 80
       protocol = "TCP"
