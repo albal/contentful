@@ -17,6 +17,16 @@ resource "azurerm_resource_group" "rg" {
   location = "uksouth"
 }
 
+variable "CONTENTFUL_APIKEY" {
+  type = string
+  sensitive = true
+}
+
+variable "CONTENTFUL_SPACE" {
+  type = string
+  sensitive = true
+}
+
 resource "azurerm_container_group" "contentful-g" {
   name                = "contentful-group"
   location            = azurerm_resource_group.rg.location
