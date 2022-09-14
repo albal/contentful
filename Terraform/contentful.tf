@@ -31,7 +31,10 @@ resource "azurerm_container_group" "contentful-g" {
     cpu    = "0.5"
     memory = "1.5"
 
-    environment_variables = ["TF_VAR_CONTENTFUL_APIKEY", "TF_VAR_CONTENTFUL_SPACE"]
+    environment_variables = {
+      CONTENTFUL_APIKEY = var.TF_VAR_CONTENTFUL_APIKEY,
+      CONTENTFUL_SPACE  = var.TF_VAR_CONTENTFUL_SPACE
+    }
 
     ports {
       port     = 80
