@@ -32,9 +32,6 @@ jobs:
     - name: Check for az command (user)
       run: which az && az --version
 
-    - name: Check for az command (root)
-      run: sudo which az && az --version
-
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
