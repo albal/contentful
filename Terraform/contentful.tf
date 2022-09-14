@@ -20,7 +20,7 @@ resource "azurerm_container_group" "ntweekly" {
   name                = "ntweekly-group"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  ip_address_type     = "public"
+  ip_address_type     = "Public"
   dns_name_label      = "dfecontentful"
   os_type             = "Linux"
 
