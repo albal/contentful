@@ -9,3 +9,10 @@ CONTENTFUL_SPACE  | y6avebdhb88
 CONTENTFUL_APIKEY | argyGYGHjhdehueuehdju_as-2TYTYajwl
 
 Note: these are sample credentials
+
+### GitHub Actions
+
+Terraform 
+Build / Push and Build
+tfsec
+codcacy
