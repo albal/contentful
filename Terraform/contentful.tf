@@ -18,12 +18,12 @@ resource "azurerm_resource_group" "rg" {
 }
 
 variable "CONTENTFUL_APIKEY" {
-  type = string
+  type      = string
   sensitive = true
 }
 
 variable "CONTENTFUL_SPACE" {
-  type = string
+  type      = string
   sensitive = true
 }
 
