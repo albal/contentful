@@ -32,8 +32,8 @@ resource "azurerm_container_group" "contentful-g" {
     memory = "1.5"
 
     environment_variables = {
-      CONTENTFUL_APIKEY = var.TF_VAR_CONTENTFUL_APIKEY,
-      CONTENTFUL_SPACE  = var.TF_VAR_CONTENTFUL_SPACE
+      CONTENTFUL_APIKEY = var.CONTENTFUL_APIKEY,
+      CONTENTFUL_SPACE  = var.CONTENTFUL_SPACE
     }
 
     ports {
