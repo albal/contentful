@@ -2,13 +2,14 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.22"
+      version = "3.21.1"
     }
   }
 }
 
 provider "azurerm" {
   features {}
+  tenant_id = "ba82b308-dd6b-4236-b218-6262064c27ee"
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -16,8 +17,8 @@ resource "azurerm_resource_group" "rg" {
   location = "uksouth"
 }
 
-resource "azurerm_container_group" "ntweekly" {
-  name                = "ntweekly-group"
+resource "azurerm_container_group" "contentful-g" {
+  name                = "contentful-group"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   ip_address_type     = "Public"
@@ -30,6 +31,8 @@ resource "azurerm_container_group" "ntweekly" {
     cpu    = "0.5"
     memory = "1.5"
 
+    environment_variables = ["TF_VAR_CONTENTFUL_APIKEY", "TF_VAR_CONTENTFUL_SPACE"]
+    
     ports {
       port     = 80
       protocol = "TCP"
