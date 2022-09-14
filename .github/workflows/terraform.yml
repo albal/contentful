@@ -27,8 +27,14 @@ jobs:
 
     steps:
     - name: Install Azure CLI
-      run: curl -sL https://aka.ms/InstallAzureCLIDeb | bash 
-    
+      run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash 
+
+    - name: Check for az command (user)
+      run: which az
+
+    - name: Check for az command (root)
+      run: sudo which az
+
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
