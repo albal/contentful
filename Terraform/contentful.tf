@@ -17,12 +17,12 @@ resource "azurerm_resource_group" "rg" {
   location = "uksouth"
 }
 
-variable "CONTENTFUL_APIKEY" {
+variable "contentful_apikey" {
   type      = string
   sensitive = true
 }
 
-variable "CONTENTFUL_SPACE" {
+variable "contentful_space" {
   type      = string
   sensitive = true
 }
@@ -42,8 +42,8 @@ resource "azurerm_container_group" "contentful-g" {
     memory = "1.5"
 
     environment_variables = {
-      CONTENTFUL_APIKEY = var.CONTENTFUL_APIKEY,
-      CONTENTFUL_SPACE  = var.CONTENTFUL_SPACE
+      CONTENTFUL_APIKEY = var.contentful_apikey,
+      CONTENTFUL_SPACE  = var.contentful_space
     }
 
     ports {
