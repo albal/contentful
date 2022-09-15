@@ -31,3 +31,6 @@ jobs:
       -
         name: Build, Tag & Push
         uses: albal/github-actions-docker-publish@0.1.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
