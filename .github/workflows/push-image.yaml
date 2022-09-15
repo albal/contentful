@@ -21,12 +21,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+#      -
+#        name: Build and push
+#        uses: docker/build-push-action@v3
+#        with:
+#          push: true
+#          file: ./Contentful/Dockerfile
+#          tags: albal/contentful:latest
       -
-        name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          push: true
-          context: ./Contentful
-          file: ./Contentful/Dockerfile
-          tags: albal/contentful:latest
-          
+        name: Build, Tag & Push
+        uses: albal/github-actions-docker-publish
