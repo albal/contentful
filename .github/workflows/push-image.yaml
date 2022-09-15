@@ -8,6 +8,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    steps:
       - name: Build, Tag and Push
         uses: albal/github-actions-docker-publish@0.1.0
         with:
