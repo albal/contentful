@@ -7,9 +7,10 @@
 name: 'Terraform'
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
+  workflow_run:
+    workflows: ["Docker Build & Push"]
+    types:
+      - completed
 
 permissions:
   contents: read
