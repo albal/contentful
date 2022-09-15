@@ -30,4 +30,4 @@ jobs:
 #          tags: albal/contentful:latest
       -
         name: Build, Tag & Push
-        uses: albal/github-actions-docker-publish
+        uses: albal/github-actions-docker-publish@0.1.0
