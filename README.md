@@ -16,3 +16,6 @@ Terraform
 Build / Push and Build
 tfsec
 codcacy
+
+## Trying cutom build action
+For building the docker image
