@@ -21,10 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      ARM_CLIENT_ID: 9cdf587b-1e7b-439c-a246-7d2ad7c69da1
+      ARM_CLIENT_ID: ${{secrets.TF_ARM_CLIENT_ID}}
       ARM_CLIENT_SECRET: ${{secrets.TF_ARM_CLIENT_SECRET}}
-      ARM_SUBSCRIPTION_ID: 2ca7f686-b554-401a-8630-3ebc46e42e64
-      ARM_TENANT_ID: ba82b308-dd6b-4236-b218-6262064c27ee
+      ARM_SUBSCRIPTION_ID: ${{secrets.TF_ARM_SUBSCRIPTION_ID}}
+      ARM_TENANT_ID: ${{secrets.TF_ARM_TENANT_ID}}
+      TF_VAR_tenant_id: ${{secrets.TF_ARM_TENANT_ID}}
       TF_VAR_contentful_apikey: ${{secrets.TF_VAR_CONTENTFUL_APIKEY}}
       TF_VAR_contentful_space: ${{secrets.TF_VAR_CONTENTFUL_SPACE}}
 
