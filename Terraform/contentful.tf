@@ -9,7 +9,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-  tenant_id = "ba82b308-dd6b-4236-b218-6262064c27ee"
+  tenant_id = "9c7d9dd3-840c-4b3f-818e-552865082e16"
 }
 
 resource "azurerm_resource_group" "rg" {
