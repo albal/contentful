@@ -9,12 +9,17 @@ terraform {
 
 provider "azurerm" {
   features {}
-  tenant_id = "9c7d9dd3-840c-4b3f-818e-552865082e16"
+  tenant_id = var.tenant_id
 }
 
 resource "azurerm_resource_group" "rg" {
   name     = "Contentful"
   location = "uksouth"
+}
+
+variable "tenant_id" {
+  type      = string
+  sensitive = true
 }
 
 variable "contentful_apikey" {
