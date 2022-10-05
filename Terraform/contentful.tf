@@ -32,7 +32,7 @@ variable "contentful_space" {
   sensitive = true
 }
 
-resource "azurerm_container_group" "contentful-g" {
+resource "azurerm_container_group" "contentful-rg" {
   name                = "contentful-group"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
