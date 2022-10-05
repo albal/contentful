@@ -13,8 +13,14 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "Contentful"
-  location = "uksouth"
+  name     = "s185d01-devcontentful-rg"
+  location = "westeurope"
+  tags = {
+    "Environment"  = "dev",
+    "Portfolio"    = "Digital and Technology",
+    "Service Line" = "Childrens Social Care Improvement and Learning",
+    "Service"      = "Azure Platform"
+  }
 }
 
 variable "tenant_id" {
