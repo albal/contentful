@@ -1,0 +1,16 @@
+name: manual
+
+on: workflow_dispatch
+
+jobs:
+  hello:
+    name: Say Hello
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Echo Hello
+        run: echo "Hello world!"
