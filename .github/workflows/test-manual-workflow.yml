@@ -1,3 +1,5 @@
+name: Test Manual
+
 on:
   workflow_dispatch:
     inputs:
