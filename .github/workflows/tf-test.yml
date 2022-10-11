@@ -1,5 +1,7 @@
 name: 'Terraform2'
 
+on: workflow_dispatch
+
 jobs:
   terraform-test:
     name: 'Terraform Test'
@@ -16,6 +18,8 @@ jobs:
       run:
         shell: bash
 
+    steps:
+  
     - name: Checkout
       uses: actions/checkout@v3
 
