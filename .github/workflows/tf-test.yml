@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Terraform2'
 
 on: workflow_dispatch
 
@@ -6,8 +6,8 @@ permissions:
   contents: read
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  terraform2:
+    name: 'Terraform2'
     runs-on: ubuntu-latest
     environment: Dev
     env:
