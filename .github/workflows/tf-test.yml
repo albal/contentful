@@ -1,10 +1,5 @@
 name: 'Terraform2'
 
-on: workflow_dispatch
-
-permissions:
-  contents: read
-
 jobs:
   terraform-test:
     name: 'Terraform Test'
