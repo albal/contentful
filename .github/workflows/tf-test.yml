@@ -6,8 +6,8 @@ permissions:
   contents: read
 
 jobs:
-  terraform2:
-    name: 'Terraform2'
+  terraform-test:
+    name: 'Terraform Test'
     runs-on: ubuntu-latest
     environment: Dev
     env:
