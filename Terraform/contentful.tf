@@ -67,7 +67,7 @@ resource "azurerm_linux_web_app" "linux-web-app" {
   service_plan_id     = azurerm_service_plan.service-plan.id
 
   app_settings = {
-    CONTENTFUL_SPACE = var.contentful_space
+    CONTENTFUL_SPACE  = var.contentful_space
     CONTENTFUL_APIKEY = var.contentful_apikey
   }
 
@@ -81,7 +81,7 @@ resource "azurerm_linux_web_app" "linux-web-app" {
 
     ip_restriction {
       name                      = "AGW-Subnet"
-      virtual_network_subnet_id = azurerm_subnet.frontend.id      
+      virtual_network_subnet_id = azurerm_subnet.frontend.id
       priority                  = 2000
       action                    = "Allow"
     }

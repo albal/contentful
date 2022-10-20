@@ -8,7 +8,7 @@
 **/.terraform/**
 **/.tfvars
 **/.tfstate
-
+**/.terraform.lock.hcl
 # User-specific files
 *.rsuser
 *.suo
