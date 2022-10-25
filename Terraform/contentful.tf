@@ -275,18 +275,6 @@ resource "azurerm_network_security_group" "nsg" {
   }
 
   security_rule {
-    name                       = "GatewayBackEndHealthInBound"
-    priority                   = 2000
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "65200-65535"
-    source_address_prefix      = "GatewayManager"
-    destination_address_prefix = "*"
-  }
-
-  security_rule {
     name                       = "AllowVnetInBound"
     priority                   = 3650
     direction                  = "Inbound"
@@ -305,9 +293,9 @@ resource "azurerm_network_security_group" "nsg" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "65200-65535"
-    source_address_prefix      = "*"
-    destination_address_prefix = "GatewayManager"
+    destination_port_ranges    = ["65200-65535"]
+    source_address_prefix      = "GatewayManager"
+    destination_address_prefix = "*"
   }
 
   security_rule {
