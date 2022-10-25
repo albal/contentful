@@ -161,7 +161,7 @@ resource "azurerm_linux_web_app" "linux-web-app" {
 #}
 
 resource "azurerm_application_gateway" "appgw" {
-  name                = "s185d01-chidrens-social-care-cpd-app-gateway"
+  name                = "s185d01-csc-cpd-app-gateway"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
@@ -174,8 +174,8 @@ resource "azurerm_application_gateway" "appgw" {
   }
 
   gateway_ip_configuration {
-    name                 = "s185d01-gateway-ip-configuration"
-    subnet_id            = azurerm_subnet.frontend.id
+    name      = "s185d01-gateway-ip-configuration"
+    subnet_id = azurerm_subnet.frontend.id
   }
 
   frontend_port {
