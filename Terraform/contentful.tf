@@ -36,14 +36,14 @@ resource "azurerm_subnet" "frontend" {
   name                 = "s185d01-chidrens-social-care-cpd-sn01"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.0.0.0/24"]
+  address_prefixes     = ["10.0.0.0/26"]
 }
 
 resource "azurerm_subnet" "backend" {
   name                 = "s185d01-chidrens-social-care-cpd-sn02"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = ["10.0.0.128/26"]
 }
 
 resource "azurerm_public_ip" "pip1" {
@@ -298,17 +298,17 @@ resource "azurerm_network_security_group" "nsg" {
     destination_address_prefix = "*"
   }
 
-  security_rule {
-    name                       = "DenyAllInBound"
-    priority                   = 3655
-    direction                  = "Inbound"
-    access                     = "Deny"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "*"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+  # security_rule {
+  #   name                       = "DenyAllInBound"
+  #   priority                   = 3655
+  #   direction                  = "Inbound"
+  #   access                     = "Deny"
+  #   protocol                   = "Tcp"
+  #   source_port_range          = "*"
+  #   destination_port_range     = "*"
+  #   source_address_prefix      = "*"
+  #   destination_address_prefix = "*"
+  # }
 
   # security_rule {
   #   name                       = "AllowVnetOutBound"
