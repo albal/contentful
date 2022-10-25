@@ -173,12 +173,9 @@ resource "azurerm_application_gateway" "appgw" {
     capacity = 2
   }
 
-  virtual_network_name      = azurerm_virtual_network.vnet1.name
-  virtual_network_subnet_id = azurerm_subnet.frontend.id
-
   gateway_ip_configuration {
-    name      = "s185d01-gateway-ip-configuration"
-    subnet_id = azurerm_subnet.frontend.id
+    name                 = "s185d01-gateway-ip-configuration"
+    subnet_id            = azurerm_subnet.frontend.id
   }
 
   frontend_port {
@@ -195,8 +192,6 @@ resource "azurerm_application_gateway" "appgw" {
     name  = var.backend_address_pool_name
     fqdns = [azurerm_linux_web_app.linux-web-app.default_hostname]
   }
-
-
 
   backend_http_settings {
     name                                = var.http_setting_name
