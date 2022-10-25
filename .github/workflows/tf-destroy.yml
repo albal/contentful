@@ -13,6 +13,8 @@ jobs:
       ARM_SUBSCRIPTION_ID: ${{secrets.TF_ARM_SUBSCRIPTION_ID}}
       ARM_TENANT_ID: ${{secrets.TF_ARM_TENANT_ID}}
       TF_VAR_tenant_id: ${{secrets.TF_ARM_TENANT_ID}}
+      TF_VAR_contentful_apikey: ${{secrets.TF_VAR_CONTENTFUL_APIKEY}}
+      TF_VAR_contentful_space: ${{secrets.TF_VAR_CONTENTFUL_SPACE}}
 
     defaults:
       run:
