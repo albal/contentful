@@ -21,7 +21,6 @@ resource "azurerm_resource_group" "rg" {
     "Portfolio"    = "Children’s and families",
     "Service Line" = "Childrens Social Care Improvement and Learning",
     "Service"      = "Social Worker Career Progression"
-    "Owner"        = "James O’donoghue"
   }
 }
 
@@ -232,7 +231,10 @@ resource "azurerm_application_gateway" "appgw" {
 
   tags = azurerm_resource_group.rg.tags
 
-  depends_on = [azurerm_network_security_group.nsg]
+  depends_on = [
+    azurerm_network_security_group.nsg,
+    azurerm_subnet_network_security_group_association.blockall
+  ]
 }
 
 resource "azurerm_network_interface" "nic" {
