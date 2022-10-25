@@ -3,8 +3,8 @@ name: 'Terraform Destroy'
 on: workflow_dispatch
 
 jobs:
-  terraform-test:
-    name: 'Terraform Test'
+  terraform-destroy:
+    name: 'Terraform Destroy'
     runs-on: ubuntu-latest
     environment: Dev
     env:
@@ -35,5 +35,5 @@ jobs:
     - name: Terraform Init
       run: terraform -chdir=Terraform init
 
-    - name: Terraform Apply
+    - name: Terraform Destroy
       run: terraform -chdir=Terraform destroy -auto-approve -input=false
