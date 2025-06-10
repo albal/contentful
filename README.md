@@ -19,5 +19,3 @@ codcacy
 
 ## Trying cutom build action
 For building the docker image
-
-.
